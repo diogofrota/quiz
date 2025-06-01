@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz - Educação em Desastres</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Quiz - Educação em Desastres</h1>
+  </header>
+  <div class="container fade-in">
+    <nav>
+      <button onclick="mostrarTela('menu')">Menu</button>
+      <button onclick="mostrarTela('formulario')">Iniciar Quiz</button>
+      <button onclick="mostrarClassificacao()">Classificação</button>
+      <button onclick="location.reload()">Sair</button>
+    </nav>
+
+    <div id="menu">
+      <h2>Bem-vindo ao Quiz de Educação em Desastres!</h2>
+      <p>Utilize o menu acima para iniciar o quiz ou ver a classificação.</p>
+    </div>
+
+    <div id="formulario" class="fade-in" style="display: none;">
+      <h2>Insira seus dados</h2>
+      <input type="text" id="nome" placeholder="Digite seu nome" required>
+      <input type="email" id="email" placeholder="Digite seu e-mail" required>
+      <button onclick="iniciarQuiz()">Começar</button>
+    </div>
+
+    <div id="quiz" class="fade-in" style="display: none;">
+      <div id="pergunta"></div>
+      <div id="alternativas"></div>
+      <button onclick="proximaPergunta()">Próxima</button>
+    </div>
+
+    <div id="resultado" class="fade-in" style="display: none;"></div>
+    <div id="ranking" class="fade-in" style="display: none;"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
