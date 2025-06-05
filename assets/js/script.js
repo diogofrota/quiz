@@ -86,3 +86,6 @@ function mostrarClassificacao() {
   document.getElementById("resultado").style.display = "none";
 }
 
+function paginainicial() {
+  window.location.href = "index.html";
+}
