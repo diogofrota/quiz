@@ -34,15 +34,27 @@ function iniciarQuiz() {
   indice = 0;
   pontos = 0;
   mostrarPergunta();
+
+  document.getElementById("nome").value = "";
+  document.getElementById("email").value = "";
 }
 
 function mostrarPergunta() {
   let p = perguntas[indice];
   document.getElementById("pergunta").innerHTML = `<h3>${p.texto}</h3>`;
   let html = "";
+  // p.alternativas.forEach((alt, i) => {
+  //   html += `<label><input type='radio' name='resposta' value='${i}'> ${alt}</label>`;
+  // });
+
   p.alternativas.forEach((alt, i) => {
-    html += `<label><input type='radio' name='resposta' value='${i}'> ${alt}</label>`;
-  });
+  html += `
+    <div class="alternativa">
+      <input type='radio' name='resposta' id='alt${i}' value='${i}'>
+      <label for='alt${i}'>${alt}</label>
+    </div>
+  `;
+});
   document.getElementById("alternativas").innerHTML = html;
 }
 

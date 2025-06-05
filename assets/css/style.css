@@ -77,3 +77,34 @@ nav button {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+
+/* aalterção layout na escolha */
+
+.alternativa {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  /* border: 1px solid blueviolet; */
+}
+
+.alternativa input[type="radio"] {
+  appearance: none;
+  width: 5px;
+  height: 5px;
+  border: 2px solid #3b82f6;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.alternativa input[type="radio"]:checked {
+  background-color: #3b82f6;
+  border: 2px solid #3b82f6;
+
+}
+
+
